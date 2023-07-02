@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* heading */
+h3{
+    font-weight: 100;
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    padding-top: 100px;
+    margin-left: -60px;
+}
+
+/* div hero */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+    position: relative;
+}
+
+/* conatiner div */
+
+.container{
+    width: 800px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container::before{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #f41b75;
+    border-radius: 5px;
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    width: 180px;
+    height: 180px;
+    background: #419aff;
+    border-radius: 50%;
+    position: absolute;
+    right: -30px;
+    bottom: -50px;
+    z-index: -1;
+}
+
+/* clock div */
+
+.clock{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+}
+
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after{
+    font-size: 16px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* clock image */
+.clock-img{
+    height: 120px;
+    width: 120px;
+    display: inline-block;
+    position: relative;
+    top: -90px;
+    right: -140px;
+}
+
+/* buttons */
+button{
+    width: 150px;
+    height: 50px;
+    position: relative;
+    top: -80px;
+    background: transparent;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover{
+    background: white;
+    color: #f41b75;
+    font-weight: 600;
+    text-transform: capitalize;
+}
