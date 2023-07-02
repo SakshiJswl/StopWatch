@@ -1,6 +1,6 @@
 var seconds = 00;
-var tens = 00;
-var appendTens = document.getElementById('tens')
+var miliSeconds = 00;
+var appendMiliSeconds = document.getElementById('milisec')
 var appendSeconds = document.getElementById('sec');
 var buttonStart = document.getElementById('button-start');
 var buttonStop = document.getElementById("button-stop");
@@ -12,19 +12,19 @@ var interval;  //to store timer values
 
 function startTimer() {
 
-    tens++;
+    miliSeconds++;
 
-    if(tens < 9){
-        appendTens.innerHTML = "0" + tens;
+    if( miliSeconds < 9){
+        appendMiliSeconds.innerHTML = "0" +  miliSeconds;
     }
 
-    if(tens > 9){
-        appendTens.innerHTML = tens;
+    if( miliSeconds > 9){
+        appendMiliSeconds.innerHTML =  miliSeconds;
     }
 
-    if(tens > 99){
-        tens = 0;
-        appendTens.innerHTML = "0" + 0;
+    if( miliSeconds > 99){
+        miliSeconds = 0;
+        appendMiliSeconds.innerHTML = "0" + 0;
         seconds++;
         appendSeconds.innerHTML = "0" + seconds;
     }
@@ -50,8 +50,8 @@ buttonStop.onclick = function () {
 // when reset button is clicked
 buttonReset.onclick = function () {
     clearInterval(interval);
-    tens = "00";
+    miliSeconds = "00";
     seconds = "00";
     appendSeconds.innerHTML = seconds;
-    appendTens.innerHTML = tens;
+    appendMiliSeconds.innerHTML = tens;
 };
